@@ -6,16 +6,16 @@
 
 class math {
     private:
-        int pascalSpecific(int n, int k) {
-            return static_cast<int>(std::tgamma(k+1)*std::tgamma(n-k+1));
+        long long int pascalSpecific(int n, int k) {
+            return static_cast<int>(std::tgamma(n+1)/(std::tgamma(k+1)*std::tgamma(n-k+1)));
         }
     public:
-        std::vector<int> pascal(int n) {
+        std::vector<long long int> pascal(int n) {
             if (n<0) {
                 return {};
             }
-            std::vector<int> a = {};
-            for (int k = 1; k<=n+1; k++) {
+            std::vector<long long int> a = {};
+            for (int k = 0; k<=n; k++) {
                 a.push_back(pascalSpecific(n, k));
             }
             return a;
