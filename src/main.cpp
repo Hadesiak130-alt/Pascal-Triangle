@@ -14,6 +14,7 @@ int main() {
     for (int num : M.pascal(n)) {
         std::cout << num << "  ";
     }
+    std::cin.ignore();
     std::cin.get();
     return 0;
 }
