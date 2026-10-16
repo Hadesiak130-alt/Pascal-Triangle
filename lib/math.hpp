@@ -7,7 +7,7 @@
 class math {
     private:
         long long int pascalSpecific(int n, int k) {
-            return static_cast<int>(std::tgamma(n+1)/(std::tgamma(k+1)*std::tgamma(n-k+1)));
+            return static_cast<long long int>(std::tgamma(n+1)/(std::tgamma(k+1)*std::tgamma(n-k+1)));
         }
     public:
         std::vector<long long int> pascal(int n) {
