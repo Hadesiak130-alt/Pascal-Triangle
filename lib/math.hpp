@@ -18,6 +18,7 @@ class math {
             for (int k = 1; k<=n+1; k++) {
                 a.push_back(pascalSpecific(n, k));
             }
+            return a;
         }
 };
 
